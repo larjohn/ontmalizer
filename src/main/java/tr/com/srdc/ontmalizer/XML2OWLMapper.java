@@ -250,8 +250,8 @@ public class XML2OWLMapper {
 					subject.addLiteral(prop, value);
 				}
 			}	
-			
-			traverseAttributes(node, object, objectType.getResource());
+			if(object!=null)
+			    traverseAttributes(node, object, objectType.getResource());
 
 		}
 		// This case is only valid for instances of mixed classes
